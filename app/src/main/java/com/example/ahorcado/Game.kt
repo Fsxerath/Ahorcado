@@ -40,6 +40,7 @@ class Game : AppCompatActivity() {
         }
         return Acum.toCharArray()
     }
+
     fun imprimirArray(x: CharArray): String{
         var Acum: String = ""
         for (i in x.indices - 1){
