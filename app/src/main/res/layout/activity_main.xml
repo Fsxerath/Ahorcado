@@ -6,37 +6,96 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <LinearLayout
-        android:layout_width="344dp"
-        android:layout_height="649dp"
-        android:orientation="vertical"
+    <TextView
+        android:id="@+id/txtSelect"
+        android:paddingTop="30dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Seleccione la dificultad"
+        android:textColor="@color/black"
+        android:textSize="35dp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:gravity="center"/>
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:paddingTop="10dp"
+        android:paddingLeft="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/txtSelect">
+
+        <RadioButton
+            android:id="@+id/rbFacil"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Fácil"
+            android:textColor="@color/black"
+            android:textSize="20dp"/>
+
+        <RadioButton
+            android:id="@+id/rbMedio"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Medio"
+            android:textColor="@color/black"
+            android:textSize="20dp"/>
+
+        <RadioButton
+            android:id="@+id/rbDificil"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Dificil"
+            android:textColor="@color/black"
+            android:textSize="20dp"/>
+    </RadioGroup>
+    <TextView
+        android:id="@+id/txtCategory"
+        app:layout_constraintTop_toBottomOf="@id/radioGroup"
+        android:paddingTop="30dp"
+        android:textSize="30dp"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Categoría"/>
+
+    <RadioGroup
+        android:id="@+id/radioGroup2"
+        android:paddingTop="10dp"
+        android:paddingLeft="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/txtCategory">
+
+        <RadioButton
+            android:id="@+id/rbGames"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Videojuegos"
+            android:textColor="@color/black"
+            android:textSize="20dp"/>
+
+        <RadioButton
+            android:id="@+id/rbBandas"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Empresas"
+            android:textColor="@color/black"
+            android:textSize="20dp"/>
+
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/btnPlay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" >
-
-        <Button
-            android:id="@+id/button4"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="FACIL"
-            android:layout_weight="1"
-            />
-
-        <Button
-            android:id="@+id/button5"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="MEDIO"
-            android:layout_weight="1"
-            />
-
-        <Button
-            android:id="@+id/button6"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="DIFICIL"
-            android:layout_weight="1"
-            />
-    </LinearLayout>
+        app:layout_constraintTop_toBottomOf="@id/radioGroup2"
+        android:text="Jugar"/>
 </androidx.constraintlayout.widget.ConstraintLayout>
